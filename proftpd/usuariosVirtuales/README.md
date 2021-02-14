@@ -15,8 +15,6 @@ Un usuario virtual, no tiene cuenta REAL en el sistema.
 echo "DefaultRoot ~" >> /etc/proftpd/proftpd.conf
 echo "RequireValidShell off" >> /etc/proftpd/proftpd.conf
 echo "AuthUserFile /etc/proftpd/ftpd.passwd" >> /etc/proftpd/proftpd.conf
-ftpasswd --passwd --name --uid=3000 --gid=3000 --home /srv/alumno/ --shell=/bin/bash/false
-ftpasswd --passwd --name=profesor --uid=4000 --gid=4000 --home /srv/profesor/ --shell=/bin/bash/false
 mkdir /srv/alumno
 mkdir /srv/profesor
 cd /srv/alumno/
@@ -28,6 +26,8 @@ touch prueba-profesor.txt
 chown -R ftp:nogroup /srv/
 chmod 777 -R /srv/profesor/
 ls -Rl /srv/ 
+ftpasswd --passwd --name --uid=3000 --gid=3000 --home /srv/alumno/ --shell=/bin/bash/false
+ftpasswd --passwd --name=profesor --uid=4000 --gid=4000 --home /srv/profesor/ --shell=/bin/bash/false
 ```
 
 *crear usuarios...*
