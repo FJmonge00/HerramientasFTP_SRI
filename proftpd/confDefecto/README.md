@@ -96,6 +96,7 @@ proftpd -t
 systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
+
 ![ftpfotos](../../imagenes/pruebasPermisos.jpg)
 
 _________________________________________________
