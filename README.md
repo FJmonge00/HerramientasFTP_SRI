@@ -7,7 +7,7 @@
 
 ![red](/imagenes/red.png)
 
-## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
+## [1.- Instalación y Comprobaciones.](./proftpd/instalacionYComprobaciones)
 <!-- ## [2.- Estructura de ficheros de configuración.](./apache2/EstructuraFicherosConfiguracion)
 ## [3.- Directivas.](./apache2/Directivas)
 ## [4.- Sitios Virtuales.](./apache2/SitiosVirtuales)
