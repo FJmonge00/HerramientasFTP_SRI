@@ -91,6 +91,14 @@ systemctl status proftpd.service
 ```
 
 ```conf
+   <Directory /srv/ftp/subida/*>
+   <Limit Write>
+        AllowAll
+   </Limit>
+   </Directory>
+```
+
+```conf
 <Limit LOGIN>
     DenyUser paco,pepa #Impide el acceso a paco y pepa
 </Limit>
