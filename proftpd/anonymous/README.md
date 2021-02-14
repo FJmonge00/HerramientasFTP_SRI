@@ -65,6 +65,9 @@ systemctl status proftpd.service
 
 ## EJEMPLOS DE OTRAS CONFIGURACIONES
 
+
+![ftpfotos](../../imagenes/ejemplosAnonymous.jpg)
+
 ```conf
 <Directory /home/ftp/*>
     <Limit READ>
@@ -92,18 +95,42 @@ systemctl status proftpd.service
     DenyUser paco,pepa #Impide el acceso a paco y pepa
 </Limit>
 ```
+
 **Resumen de permisos:**
 ![ftpfotos](../../imagenes/permisos.jpg)
 ![ftpfotos](../../imagenes/permisos2.jpg)
 
-** Sintaxis y Reiniciar servicio**
+
+## Crear un directorio llamado subida que permita escribir.
+
+```bash
+mkdir /srv/ftp/subida
+cd /srv/ftp/subida
+wget https://s1.eestatic.com/2019/08/09/omicrono/omicrono_420219253_131917138_1024x576.jpg
+wget https://s1.eestatic.com/2019/08/09/omicrono/omicrono_420219253_131917138_1024x576.jpg
+chown -R ftp:nogroup /srv/ftp/subida
+ls -lRa /srv/ftp/
+```
+
+```conf
+<Directory /home/ftp/*>
+    <Limit READ>
+        AllowAll #Permitimos leer a todo el mundo en el directorio /home/ftp
+   </Limit>
+   <Limit Write>
+        DenyAll        #Impedimos la escritura en el mismo
+   </Limit>
+</Directory>
+```
+<!-- **Sintaxis y Reiniciar servicio**
 
 ```bash
 #Sintaxis
 proftpd -t
 systemctl restart proftpd.service
 systemctl status proftpd.service
-```
+``` -->
+
 <!-- 
 #### Comprobaciones de acceso
 
