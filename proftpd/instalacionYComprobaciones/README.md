@@ -3,7 +3,7 @@
 # Instalación proftpd
 
 ```bash
-apt-get install proftpd-basic -y
+apt-get install proftpd-basic -y``
 ```
 
 *(Opcional) Instalamos documentación de proftpd*
@@ -18,7 +18,7 @@ apt-get install proftpd-doc -y
 proftpd -v
 ```
 
-![estadoServicio](/imagenes/version.jpg)
+![estadoServicio](../../imagenes/version.jpg)
 
 ## Estado del servicio
 
@@ -38,7 +38,7 @@ systemctl status proftpd.service
 /etc/init.d/proftpd status
 ```
 
-![estadoServicio](/imagenes/estadoServicio.jpg)
+![estadoServicio](../../imagenes/estadoServicio.jpg)
 
 ## Usuarios creados
 

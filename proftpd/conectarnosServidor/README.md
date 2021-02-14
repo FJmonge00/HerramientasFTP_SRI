@@ -10,13 +10,13 @@ ftp 192.168.2.61
 ```
 *Usar un usuario del sistema*
 
-![estadoServicio](/imagenes/conexionConServidor.jpg)
+![estadoServicio](../../imagenes/conexionConServidor.jpg)
 
 *Para ver los posibles comandos escribir un: ``?``*
 
 **Breve resumen de comandos:**
 
-![estadoServicio](/imagenes/comandos.jpg)
+![estadoServicio](../../imagenes/comandos.jpg)
 
 ## Desde el navegador
 
@@ -24,7 +24,7 @@ ftp 192.168.2.61
 firefox ftp://192.168.0.243
 ```
 
-![estadoServicio](/imagenes/accesoWeb.jpg)
+![estadoServicio](../../imagenes/accesoWeb.jpg)
 
 
 ## Cliente FTP Gráfico
@@ -35,7 +35,7 @@ apt-get install filezilla
 filezilla &
 ```
 
-![estadoServicio](/imagenes/conexionFilezilla.jpg)
+![estadoServicio](../../imagenes/conexionFilezilla.jpg)
 
 _________________________________________________
 *[Volver atrás...](../../README.md)*
