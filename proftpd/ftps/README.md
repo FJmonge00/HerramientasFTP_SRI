@@ -54,7 +54,7 @@ systemctl status proftpd.service
 
 ## Configurar cifrado en todos los sitios virtuales (TLS)
 
-*Añadir en virtuals.conf*
+## Añadir en virtuals.conf
 
 ```conf
 <Global>
