@@ -80,16 +80,6 @@ systemctl status proftpd.service
 
 ![ftpfotos](../../imagenes/umask.jpg)
 
-## Cambiar permisos por defecto (Umask)
-
-```conf
-Umask				066  077
-```
-
-![ftpfotos](../../imagenes/umask.jpg)
-
-** Sintaxis y Reiniciar servicio**
-
 ```bash
 #Sintaxis
 proftpd -t

@@ -109,5 +109,37 @@ systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
 
+## Permitir a usuarios virtuales
+
+*Añadir a `/etc/proftpd/virtuals.conf`*
+
+```conf
+<Global>
+AuthUserFile /etc/proftpd/ftpd.passwd
+</Global>
+```
+
+**ó**
+
+```bash
+echo '<Global>' >> /etc/proftpd/virtuals.conf
+echo 'AuthUserFile /etc/proftpd/ftpd.passwd' >> /etc/proftpd/virtuals.conf
+echo '</Global>' >> /etc/proftpd/virtuals.conf
+```
+
+![ftpfotos](../../imagenes/confiGlobal.png)
+
+**Sintaxis y Reiniciar servicio**
+
+```bash
+#Sintaxis
+proftpd -t
+systemctl restart proftpd.service
+systemctl status proftpd.service
+```
+
+## Permitir al usuario anonimo escritura
+
+
 _________________________________________________
 *[Volver atrás...](../../README.md)*
