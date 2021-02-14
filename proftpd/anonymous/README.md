@@ -41,7 +41,7 @@ vi /etc/proftpd/proftpd.conf
  </Anonymous>
 ```
 
-***⚠️Ojo cerrar la directiva anonymous </Anonymous>⚠️***
+***⚠️Ojo cerrar la directiva anonymous < / Anonymous >⚠️***
 
 ![ftpfotos](../../imagenes/activarAnonymous.png)
 
