@@ -43,7 +43,7 @@ vi /etc/proftpd/proftpd.conf
 
 ***⚠️Ojo cerrar la directiva anonymous </Anonymous>⚠️***
 
-![ftpfotos](../../imagenes/ActivarAnonymous.png)
+![ftpfotos](../../imagenes/activarAnonymous.png)
 
 **Sintaxis y Reiniciar servicio**
 
