@@ -38,7 +38,7 @@ systemctl status proftpd.service
 /etc/init.d/proftpd status
 ```
 
-![estadoServicio](/imagenes/proftpd/estadoServicio.jpg)
+![estadoServicio](/imagenes/estadoServicio.jpg)
 
 ## Usuarios creados
 
@@ -66,7 +66,7 @@ cat /etc/proftpd/proftpd.conf | grep -v "^#\|^$"
 apt-get install ftp -y
 ```
 
-![DocumentacionLocal](/imagenes/proftpd/documentacionLocal.jpg)
+![DocumentacionLocal](/imagenes/documentacionLocal.jpg)
 
 _________________________________________________
 *[Volver atrás...](../../README.md)*
