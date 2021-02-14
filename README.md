@@ -8,8 +8,8 @@
 ![red](/imagenes/red.png)
 
 ## [1.- Instalación y Comprobaciones.](./proftpd/instalacionYComprobaciones)
-<!-- ## [2.- Estructura de ficheros de configuración.](./apache2/EstructuraFicherosConfiguracion)
-## [3.- Directivas.](./apache2/Directivas)
+## [2.- Conectarnos al servidor.](./proftpd/conectarnosServidor)
+<!-- ## [3.- Directivas.](./apache2/Directivas)
 ## [4.- Sitios Virtuales.](./apache2/SitiosVirtuales)
 ## [5.- Opciones de directorio.](./apache2/OpcionesDirectorio)
 ## [6.- Alias.](./apache2/alias/)

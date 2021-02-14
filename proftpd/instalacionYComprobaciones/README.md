@@ -3,7 +3,7 @@
 # Instalación proftpd
 
 ```bash
-apt-get install proftpd-basic -y``
+apt-get install proftpd-basic -y
 ```
 
 *(Opcional) Instalamos documentación de proftpd*
@@ -65,8 +65,6 @@ cat /etc/proftpd/proftpd.conf | grep -v "^#\|^$"
 ```bash
 apt-get install ftp -y
 ```
-
-![DocumentacionLocal](/imagenes/documentacionLocal.jpg)
 
 _________________________________________________
 *[Volver atrás...](../../README.md)*
