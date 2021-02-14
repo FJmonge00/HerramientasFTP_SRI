@@ -54,14 +54,47 @@ systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
 
-<!-- ### Directiva de mensaje Bienvenida y error de conexión
+**Comprobar acceso**
+
+|Directiva  |Función  |
+|:---------:|---------|
+|RequireValidShell off|No es necesario que anonymous tenga una cuenta creada en el sistema.|
+|DirFakeUser|Para ocultar el propietario del directorio/archivo real.|
+|DisplayLogin        welcome.msg|Mensaje de bienvenida.|
+|DisplayFirstChdir   .message| Mensaje al cambiar de directorio.|
+
+## EJEMPLOS DE OTRAS CONFIGURACIONES
 
 ```conf
-AccessGrantMSG "Bienvenido al servidor FTP de Informatica RC"
-AccessDenyMSG "Error, en el acceso al servidor FTP"
+<Directory /home/ftp/*>
+    <Limit READ>
+        AllowAll #Permitimos leer a todo el mundo en el directorio /home/ftp
+   </Limit>
+   <Limit Write>
+        DenyAll        #Impedimos la escritura en el mismo
+   </Limit>
+</Directory>
 ```
 
-![ftpfotos](../../imagenes/mensajesAccesoAlServidor.jpg)
+```conf
+<Directory /home/ftp/incoming/*>
+    <Limit STOR CMD MKD WRITE>
+  	  AllowALL   #Permitimos subir, crear directorios, etc
+   </Limit>
+   <Limit RETR DELE>            #Impedimos bajar o borrar
+      DenyALL
+   </Limit>
+</Directory>
+```
+
+```conf
+<Limit LOGIN>
+    DenyUser paco,pepa #Impide el acceso a paco y pepa
+</Limit>
+```
+**Resumen de permisos:**
+![ftpfotos](../../imagenes/permisos.jpg)
+![ftpfotos](../../imagenes/permisos2.jpg)
 
 ** Sintaxis y Reiniciar servicio**
 
@@ -71,7 +104,7 @@ proftpd -t
 systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
-
+<!-- 
 #### Comprobaciones de acceso
 
 ![ftpfotos](../../imagenes/mensajeBienvenida.jpg)
