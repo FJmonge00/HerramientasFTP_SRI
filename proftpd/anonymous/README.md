@@ -41,11 +41,11 @@ vi /etc/proftpd/proftpd.conf
  </Anonymous>
 ```
 
-***Ojo cerrar la directiva anonymous </Anonymous>***
+***⚠️Ojo cerrar la directiva anonymous </Anonymous>⚠️***
 
 ![ftpfotos](../../imagenes/ActivarAnonymous.png)
 
-** Sintaxis y Reiniciar servicio**
+**Sintaxis y Reiniciar servicio**
 
 ```bash
 #Sintaxis
