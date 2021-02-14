@@ -9,7 +9,11 @@ Con VirtualHosts podemos tener varios servidores FTP en un mismo servidor.
 >[Importante]FTP NO ES CAPAZ DE DETECTAR EL NOMBRE DE DOMINIO.
 SOLO REDIRECCIONA IP Y PUERTO.
 
-## Pre-coniguración
+>[TIP]Añade a `/etc/hosts` los dominios.
+
+![ftpfotos](../../imagenes/hosts.jpg)
+
+## Pre-configuración
 
 ```bash
 echo "Include /etc/proftpd/virtuals.conf" >> /etc/proftpd/proftpd.conf
@@ -138,8 +142,45 @@ systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
 
-## Permitir al usuario anonimo escritura
+## Permitir al usuario anónimo escritura
 
+### Pre-configuración
 
+```bash
+mkdir /srv/FTP1/sugerencias
+systemctl restart proftpd.service 
+touch /srv/FTP1/sugerencias/ejemploSugerencia.txt
+chown -R ftp:nogroup /srv/FTP1/
+ls -l ftp:nogroup /srv/FTP1/sugerencias/
+```
+
+*Añadir al virtuals.conf...*
+
+```bash
+VirtualHost ftp.servera.com>
+ServerName              "FTP1"
+Port    7000
+RequireValidShell       off
+DefaultRoot             /srv/FTP1
+<Anonymous /srv/FTP1>
+	user ftp
+	Group nogroup
+	UserAlias anonymous ftp
+	RequireValidShell off
+	<Directory *>
+		<Limit WRITE>
+			Deny All
+		</Limit>
+	</Directory>
+	<Directory /srv/FTP1/sugerencias>
+		<Limit WRITE>
+			Allow All
+		</Limit>
+	</Directory>
+</Anonymous>
+</VirtualHost>
+```
+
+*Conectarse y probar escritura en sugerencias desde anonymous*
 _________________________________________________
 *[Volver atrás...](../../README.md)*
