@@ -14,13 +14,13 @@ Un usuario virtual, no tiene cuenta REAL en el sistema.
 
 ### ⚠️⚠️⚠️ OJO AL COPIAR PROBLEMAS DE TABULACIONES⚠️⚠️⚠️
 
-### Modificar el ServerName
+### Modificar el proftpd.conf
 
 ```bash
 vi /etc/proftpd/proftpd.conf
 ```
 
-*Liena 149*
+*Linea 149*
 
 **Quitando comentarios y lineas en blanco**
 
