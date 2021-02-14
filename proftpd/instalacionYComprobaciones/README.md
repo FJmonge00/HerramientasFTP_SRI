@@ -1,58 +1,66 @@
 <img src="../../imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
-# Instalación Apache2
+# Instalación proftpd
 
-``apt install apache2 -y``
+```bash
+apt-get install proftpd-basic -y``
+```
 
-*(Opcional) Instalamos documentación de apache2*
+*(Opcional) Instalamos documentación de proftpd*
 
-``apt install apache2-doc -y``
-
-# Comprobaciones
+``apt-get install proftpd-doc -y``
 
 ## Versión de apache instalada
 
-``apache2 -v``
+``proftpd -v``
+
+![estadoServicio](/imagenes/proftpd/version.jpg)
 
 ## Estado del servicio
 
-``systemctl status apache2.service``
+``systemctl enable proftpd.service``
+
+## Estado del servicio
+
+```bash
+systemctl status proftpd.service
+```
 
 **ó**
 
-``/etc/init.d/apache2 status``
+```bash
+/etc/init.d/proftpd status
+```
 
-![estadoServicio](/imagenes/apache2/estadoServicio.jpg)
+![estadoServicio](/imagenes/proftpd/estadoServicio.jpg)
 
-## Comprobamos desde el navegador
+## Usuarios creados
 
-### Pagina principal de apache2
+Se crea usuario ftp y proftpd
 
-``firefox 192.168.0.243``
+```bash
+getent passwd
+```
 
-### Documentación local de apache2
+## Usuarios con acceso denegado
 
-``firefox http://192.168.0.243/manual/es/index.html``
+```bash
+cat /etc/ftpusers
+```
 
-![DocumentacionLocal](/imagenes/apache2/documentacionLocal.jpg)
+## Configuración por defecto
 
-## Procesos
+```bash
+cat /etc/proftpd/proftpd.conf | grep -v "^#\|^$"
+```
 
-``ps -aux | grep apache2 | grep -v "grep apache2"``
+### Instalacion de Cliente FTP Shell
 
-![procesos](/imagenes/apache2/procesos.jpg)
+```bash
+apt-get install ftp -y
+```
 
-## Ver Módulos
-
-``apachectl -M``
-
-![modulos](/imagenes/apache2/modulosApache.jpg)
-
-## Ver sitios virtuales
-
-``apachectl -S``
-
-![sitiosVirtuales](/imagenes/apache2/sitiosVirtuales.jpg)
+![DocumentacionLocal](/imagenes/proftpd/documentacionLocal.jpg)
 
 _________________________________________________
 *[Volver atrás...](../../README.md)*

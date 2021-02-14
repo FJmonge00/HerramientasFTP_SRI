@@ -1,7 +1,7 @@
 <img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
 # Herramientas Servicio FTP (Proftpd)
-![logo apache](/imagenes/apacheLogo.png)
+![logo apache](/imagenes/ProftpdLogo.png)
 
 ***Mi Topológia de red***
 
