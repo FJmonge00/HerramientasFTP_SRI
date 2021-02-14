@@ -12,6 +12,8 @@ A veces es necesario crear cuentas de usuario de acceso al servidor pero que no 
 - **Usuario virtual**: Son usuarios independientes de los usuarios del sistema. Realmente no existen como usuarios normales del sistema operativo.
 Un usuario virtual, no tiene cuenta REAL en el sistema.
 
+### ⚠️⚠️⚠️ OJO AL COPIAR PROBLEMAS DE TABULACIONES⚠️⚠️⚠️
+
 ### Modificar el ServerName
 
 ```bash
@@ -120,37 +122,33 @@ chown -R ftp:nogroup /srv/ftp/subida
 ls -lRa /srv/ftp/
 ```
 
+**Quitando comentarios y lineas en blanco**
+
 ```conf
-<Directory /home/ftp/*>
-    <Limit READ>
-        AllowAll #Permitimos leer a todo el mundo en el directorio /home/ftp
-   </Limit>
+ <Anonymous ~ftp>
+   User                         ftp
+   Group                                nogroup
+   UserAlias                    anonymous ftp
+   DirFakeUser  on ftp
+   DirFakeGroup on ftp
+   RequireValidShell            off
+   MaxClients                   10
+   DisplayLogin                 welcome.msg
+   DisplayChdir         .message
+   <Directory *>
+     <Limit WRITE>
+      DenyAll
+     </Limit>
+   </Directory>
+   <Directory /srv/ftp/subida/*>
    <Limit Write>
-        DenyAll        #Impedimos la escritura en el mismo
+        AllowAll
    </Limit>
-</Directory>
+   </Directory>
+ </Anonymous>
 ```
-<!-- **Sintaxis y Reiniciar servicio**
 
-```bash
-#Sintaxis
-proftpd -t
-systemctl restart proftpd.service
-systemctl status proftpd.service
-``` -->
-
-<!-- 
-#### Comprobaciones de acceso
-
-![ftpfotos](../../imagenes/mensajeBienvenida.jpg)
-![ftpfotos](../../imagenes/mensajeError.jpg)
-
-## Enjaular usuarios
-
-```conf
-DefaultRoot			~
-```
-![ftpfotos](../../imagenes/enjaularUsuarios.jpg)
+**Sintaxis y Reiniciar servicio**
 
 ```bash
 #Sintaxis
@@ -159,39 +157,7 @@ systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
 
-## Cambiar permisos por defecto (Umask)
-
-```conf
-Umask				066  077
-```
-
-```bash
-#Sintaxis
-proftpd -t
-systemctl restart proftpd.service
-systemctl status proftpd.service
-```
-
-![ftpfotos](../../imagenes/umask.jpg)
-
-## Cambiar permisos por defecto (Umask)
-
-```conf
-Umask				066  077
-```
-
-![ftpfotos](../../imagenes/umask.jpg)
-
-** Sintaxis y Reiniciar servicio**
-
-```bash
-#Sintaxis
-proftpd -t
-systemctl restart proftpd.service
-systemctl status proftpd.service
-```
-
-![ftpfotos](../../imagenes/pruebasPermisos.jpg) -->
+*PROBAR SUBIDAS...*
 
 _________________________________________________
 *[Volver atrás...](../../README.md)*
