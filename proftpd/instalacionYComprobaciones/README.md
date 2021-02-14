@@ -18,7 +18,7 @@ apt-get install proftpd-doc -y
 proftpd -v
 ```
 
-![estadoServicio](/imagenes/proftpd/version.jpg)
+![estadoServicio](/imagenes/version.jpg)
 
 ## Estado del servicio
 
