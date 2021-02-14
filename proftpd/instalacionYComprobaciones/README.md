@@ -8,17 +8,23 @@ apt-get install proftpd-basic -y``
 
 *(Opcional) Instalamos documentación de proftpd*
 
-``apt-get install proftpd-doc -y``
+```bash
+apt-get install proftpd-doc -y
+```
 
 ## Versión de apache instalada
 
-``proftpd -v``
+```bash
+proftpd -v
+```
 
 ![estadoServicio](/imagenes/proftpd/version.jpg)
 
 ## Estado del servicio
 
-``systemctl enable proftpd.service``
+```bash
+systemctl enable proftpd.service
+```
 
 ## Estado del servicio
 
