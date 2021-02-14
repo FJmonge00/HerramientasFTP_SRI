@@ -37,7 +37,7 @@ ls -Rl /srv/
 
 *crear usuarios...*
 
-![ftpfotos](../../imagenes/crearUsuarios.png)
+![ftpfotos](../../imagenes/crearUsuario.png)
 
 
 **Sintaxis y Reiniciar servicio**
