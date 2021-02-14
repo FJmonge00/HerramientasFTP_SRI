@@ -3,7 +3,7 @@
 # Instalación proftpd
 
 ```bash
-apt-get install proftpd-basic -y``
+apt-get install proftpd-basic -y
 ```
 
 *(Opcional) Instalamos documentación de proftpd*
