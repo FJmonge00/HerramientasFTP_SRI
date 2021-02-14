@@ -13,7 +13,7 @@
 |TimeoutIdle|El número de segundos que puede estar el cliente sin actividad (Sin hacer nada). Si llega a ese tiempo lo expulsa.|
 |Port|Puerto. Lo podríamos modificar.|
 |MaxInstances|El número de conexiones simultáneas al servidor.|
-|User|Usuario por defecto. del servidor|
+|User|Usuario por defecto del servidor|
 |Group|Grupo por defecto.|
 |Umask|Para establecer los permisos por defecto de los archivos que se creen en el servidor ftp.|
 |xferlog|Dónde se guarda los logs de las transferencias. --> tail -n 15 /var/log/proftpd/xferlog|
@@ -22,19 +22,13 @@
 ## Modificaciones
 ### Modificar el ServerName
 
-```bash
-apt-get install proftpd-doc -y
-```
-
-### Directiva de bienvenida al servidor
-
 ```conf
 ServerName			"FTP Informatica Rodrigo Caro"
 ```
 
 ![ftpfotos](../../imagenes/directivaBienvenida.jpg)
 
-### Directiva de mensaje conexion y error de conexión
+### Directiva de mensaje Bienvenida y error de conexión
 
 ```conf
 AccessGrantMSG "Bienvenido al servidor FTP de Informatica RC"
