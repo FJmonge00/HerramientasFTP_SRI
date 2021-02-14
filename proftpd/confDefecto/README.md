@@ -26,7 +26,7 @@
 ServerName			"FTP Informatica Rodrigo Caro"
 ```
 
-![ftpfotos](../../imagenes/directivaBienvenida.jpg)
+![ftpfotos](../../imagenes/directivaNombreServidor.jpg)
 
 ### Directiva de mensaje Bienvenida y error de conexión
 
