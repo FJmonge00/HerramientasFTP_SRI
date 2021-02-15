@@ -101,5 +101,12 @@ echo '</IfModule>' >> /etc/proftpd/virtuals.conf
 echo '</Global>' >> /etc/proftpd/virtuals.conf
 ```
 
+```bash
+#Sintaxis
+proftpd -t
+systemctl restart proftpd.service
+systemctl status proftpd.service
+```
+
 _________________________________________________
 *[Volver atrás...](../../README.md)*
