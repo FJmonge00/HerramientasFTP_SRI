@@ -57,7 +57,7 @@ systemctl restart proftpd.service
 systemctl status proftpd.service
 ```
 
-**FILEZILLA CONEXIÓN FTPS EXPLÍCTA**
+**FILEZILLA CONEXIÓN FTPS EXPLÍCITA**
 
 ## Configurar cifrado en todos los sitios virtuales (TLS)
 
