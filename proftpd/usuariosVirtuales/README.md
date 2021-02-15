@@ -47,6 +47,7 @@ systemctl status proftpd.service
 
 ### Manejo de Usuarios
 ```bash
+cd /etc/proftpd/
 ftpasswd --passwd --name=alumno --lock
 ftpasswd --passwd --name=alumno --unlock
 ftpasswd --passwd --name=alumno --change-password
