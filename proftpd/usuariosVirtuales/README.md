@@ -26,7 +26,7 @@ touch prueba-profesor.txt
 chown -R ftp:nogroup /srv/
 chmod 777 -R /srv/profesor/
 ls -Rl /srv/ 
-ftpasswd --passwd --name --uid=3000 --gid=3000 --home /srv/alumno/ --shell=/bin/bash/false
+ftpasswd --passwd --name=alumno --uid=3000 --gid=3000 --home /srv/alumno/ --shell=/bin/bash/false
 ftpasswd --passwd --name=profesor --uid=4000 --gid=4000 --home /srv/profesor/ --shell=/bin/bash/false
 ```
 
