@@ -148,10 +148,9 @@ systemctl status proftpd.service
 
 ```bash
 mkdir /srv/FTP1/sugerencias
-systemctl restart proftpd.service 
 touch /srv/FTP1/sugerencias/ejemploSugerencia.txt
 chown -R ftp:nogroup /srv/FTP1/
-ls -l ftp:nogroup /srv/FTP1/sugerencias/
+ls -l /srv/FTP1/sugerencias/
 ```
 
 *Añadir al virtuals.conf...*
