@@ -2,6 +2,11 @@
 
 # Conexión segura FTPs
 
+## Activar configuración a tls.conf
+
+```bash
+echo "Include /etc/proftpd/tls.conf" >> /etc/proftpd/proftpd.conf
+```
 ## Añadir a tls.conf
 
 ```conf
