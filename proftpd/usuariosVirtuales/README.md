@@ -57,5 +57,6 @@ ftpasswd --passwd --name=alumno --change-password
 
 *PROBAR SUBIDAS...*
 
+Para subir per 777
 _________________________________________________
 *[Volver atrás...](../../README.md)*

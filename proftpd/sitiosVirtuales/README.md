@@ -182,5 +182,8 @@ DefaultRoot             /srv/FTP1
 ```
 
 *Conectarse y probar escritura en sugerencias desde anonymous*
+
+Para subir per 777
+
 _________________________________________________
 *[Volver atrás...](../../README.md)*
