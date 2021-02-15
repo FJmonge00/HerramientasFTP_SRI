@@ -14,4 +14,4 @@
 ## [5.- Crear Usuarios Virtuales.](./proftpd/usuariosVirtuales)
 ## [6.- Crear Sitios Virtuales.](./proftpd/sitiosVirtuales)
 ## [7.- FTPs.](./proftpd/ftps)
-## [8.- Plantillas.](./proftpd/plantillas)
+## [8.- Plantillas.](../proftpd/plantillas)
