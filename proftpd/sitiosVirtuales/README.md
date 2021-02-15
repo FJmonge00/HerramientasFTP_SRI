@@ -180,6 +180,15 @@ DefaultRoot             /srv/FTP1
 </VirtualHost>
 ```
 
+**Sintaxis y Reiniciar servicio**
+
+```bash
+#Sintaxis
+proftpd -t
+systemctl restart proftpd.service
+systemctl status proftpd.service
+```
+
 *Conectarse y probar escritura en sugerencias desde anonymous*
 
 Para subir per 777
