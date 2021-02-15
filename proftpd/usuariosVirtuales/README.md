@@ -25,7 +25,8 @@ wget https://s1.eestatic.com/2019/08/09/omicrono/omicrono_420219253_131917138_10
 touch prueba-profesor.txt
 chown -R ftp:nogroup /srv/
 chmod 777 -R /srv/profesor/
-ls -Rl /srv/ 
+ls -Rl /srv/
+cd /etc/proftpd
 ftpasswd --passwd --name=alumno --uid=3000 --gid=3000 --home /srv/alumno/ --shell=/bin/bash/false
 ftpasswd --passwd --name=profesor --uid=4000 --gid=4000 --home /srv/profesor/ --shell=/bin/bash/false
 ```
